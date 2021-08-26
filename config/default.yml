@@ -39,5 +39,5 @@ log4js:
         - app
         - errors
         - console
-      level: app
+      level: info
 

@@ -12,4 +12,4 @@ log4js:
         - app
         - errors
         - console
-      level: error
+      level: info
