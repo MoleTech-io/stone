@@ -1,0 +1,41 @@
+env:
+  commonjs: true
+  es6: true
+  mocha: true
+  node: true
+extends:
+  - airbnb-base
+  - plugin:mocha/recommended
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+overrides:
+  -
+    files:
+      - '**/test/*.{j,t}s?(x)'
+    env:
+      mocha: true
+    rules:
+      prefer-arrow-callback: off
+      func-names: off
+      mocha/max-top-level-suites: off
+      mocha/no-setup-in-describe: off
+parserOptions:
+  ecmaVersion: 2018
+plugins:
+  - mocha
+rules:
+  camelcase: off
+  comma-dangle: [error, only-multiline]
+  max-len: [error, { code: 160, ignoreComments: true, ignoreRegExpLiterals: true }]
+  mocha/no-hooks-for-single-case: off
+  no-await-in-loop: off
+  no-console: off
+  no-continue: off
+  no-param-reassign: off
+  no-plusplus: off
+  no-restricted-syntax: off
+  no-underscore-dangle: off
+  no-unused-vars: [error, { argsIgnorePattern: ^(next|user|params)$ }]
+  object-curly-newline: off
+  space-before-function-paren: [error, always]

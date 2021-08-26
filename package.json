@@ -1,0 +1,46 @@
+{
+  "name": "stone",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "env NODE_ENV=dev node app.js",
+    "test": "env NODE_ENV=dev test=true mocha",
+    "build": "yarn config set strict-ssl false && yarn install",
+    "test-single": "env NODE_ENV=dev test=true mocha $1",
+    "lint": "node_modules/eslint/bin/eslint.js ./"
+  },
+  "dependencies": {
+    "ajv": "^6.12.2",
+    "big.js": "^5.2.2",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "crawler": "^1.2.1",
+    "crypto-js": "^3.1.9-1",
+    "err-code": "^2.0.0",
+    "ethers": "^4.0.47",
+    "express": "~4.16.0",
+    "handlebars": "^4.7.6",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
+    "log4js": "^5.2.2",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "node-cache": "^4.2.1",
+    "node-schedule": "^1.3.2",
+    "request": "^2.88.0",
+    "supertest": "^4.0.2",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-mocha": "^6.2.1",
+    "mocha": "^6.1.4"
+  }
+}

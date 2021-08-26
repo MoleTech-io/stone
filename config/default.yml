@@ -1,0 +1,43 @@
+eth:
+  name: ETH
+  uri:
+    getInternalTransaction: https://api.etherscan.io/api?module=account&action=txlistinternal&apikey=TPEYRAUFFCT18RFHWSCTQ3WRR1WXKAI2QB&txhash=
+    gaspriceEstimator: https://api.etherscan.io/api?module=proxy&action=eth_gasPrice
+    node: https://main.infura.io/v3/cda51cbe31ac465696a88915ba164a8d
+  constant:
+    getTransactionCount: eth_getTransactionCount
+    getBalance: eth_getBalance
+    sendRawTransaction: eth_sendRawTransaction
+    getTransactionReceipt: eth_getTransactionReceipt
+    getBlockByNumber: eth_getBlockByNumber
+    getBlockNumber: eth_blockNumber
+    getTransactionByHash: eth_getTransactionByHash
+    callEth: eth_call
+
+stone: 
+  port: ~
+log4js:
+  appenders: 
+    app: 
+      filename: "{{logDirectory}}/app.log"
+      pattern: .yyyy-MM-dd
+      type: dateFile
+      level: info
+    console:
+      type: console
+      level: debug
+    errorFile:
+      type: file
+      filename: "{{logDirectory}}/error.log"
+    errors: 
+      type: logLevelFilter
+      level: error
+      appender: errorFile
+  categories: 
+    default: 
+      appenders: 
+        - app
+        - errors
+        - console
+      level: app
+

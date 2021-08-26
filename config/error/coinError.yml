@@ -1,0 +1,15 @@
+'-32602': Invalid method parameter(s).
+'-32601': The method does not exist / is not available.
+'-32603': Internal error.
+'-32001': Http GET request failed.
+'-32002': Http POST request failed.
+'-32003': DispatchRequest error, return message should have a result or error.
+'-32004': Raw transaction nonce error.
+'-32005': Send transaction error, invalid rlp data.
+'-32006': body is null
+'-32007': Post id is not correct
+
+
+
+
+
