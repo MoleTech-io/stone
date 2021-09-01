@@ -1,0 +1,15 @@
+stone:
+  port: 3838
+eth:
+  uri:
+    getInternalTransaction: https://api-kovan.etherscan.io/api?module=account&action=txlistinternal&apikey=TPEYRAUFFCT18RFHWSCTQ3WRR1WXKAI2QB&txhash=
+    gaspriceEstimator: https://api-kovan.etherscan.io/api?module=proxy&action=eth_gasPrice
+    node: https://kovan.infura.io/v3/9fb57308edef40d2940b06e2a60b3bb7
+log4js:
+  categories: 
+    default: 
+      appenders: 
+        - app
+        - errors
+        - console
+      level: info
