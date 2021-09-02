@@ -1,5 +1,5 @@
 processorPath: "../service/eth"
-gasprice_estimator:
+eth_gasprice:
     method: gaspriceEstimator
     param_schema:
         type: array

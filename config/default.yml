@@ -13,7 +13,7 @@ eth:
     getBlockNumber: eth_blockNumber
     getTransactionByHash: eth_getTransactionByHash
     callEth: eth_call
-
+    
 stone: 
   port: ~
 log4js:
