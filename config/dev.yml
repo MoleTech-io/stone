@@ -14,6 +14,20 @@ eth:
     getBlockNumber: eth_blockNumber
     getTransactionByHash: eth_getTransactionByHash
     callEth: eth_call
+bsc:
+  uri:
+    getInternalTransaction: https://testnet.bscscan.com/api?module=account&action=txlistinternal&txhash=
+    gaspriceEstimator: https://testnet.bscscan.com/api?module=proxy&action=eth_gasPrice
+    node: https://data-seed-prebsc-1-s1.binance.org:8545/
+  constant:
+    getTransactionCount: eth_getTransactionCount
+    getBalance: eth_getBalance
+    sendRawTransaction: eth_sendRawTransaction
+    getTransactionReceipt: eth_getTransactionReceipt
+    getBlockByNumber: eth_getBlockByNumber
+    getBlockNumber: eth_blockNumber
+    getTransactionByHash: eth_getTransactionByHash
+    callEth: eth_call
 log4js:
   categories: 
     default: 
