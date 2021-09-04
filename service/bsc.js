@@ -39,7 +39,7 @@ const gaspriceEstimator = async () => {
 const getTransactionCount = async (params) => {
   const [address] = params;
   const id = new Date().getTime();
-  const data = { id, method: config.get('bsc.constant.getTransactionCount'), params: [address] };
+  const data = { id, method: config.get('bsc.constant.getTransactionCount'), params: [address, 'latest'] };
   const { result, error } = await post(config.get('bsc.uri.node'), data);
   return { result, error };
 };
