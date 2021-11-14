@@ -7,7 +7,7 @@ const getBalance = async (params) => {
   const id = new Date().getTime();
   if (params.length === 1) {
     const [address] = params;
-    const data = { id, method: config.get('bsc.constant.getBalance'), params: [address] };
+    const data = { id, method: config.get('bsc.constant.getBalance'), params: [address, 'latest'] };
     const { result, error } = await post(config.get('bsc.uri.node'), data);
     return { result, error };
   }
